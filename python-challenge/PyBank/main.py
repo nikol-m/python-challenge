@@ -55,6 +55,7 @@ if profit_loss_changes:
 else:
     average_change = 0
 
+#print results
 print("``` text")
 print("Financial Analysis")
 print("Total months:", row_count)
