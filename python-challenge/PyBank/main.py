@@ -56,22 +56,19 @@ else:
     average_change = 0
 
 #print results
-print("``` text")
 print("Financial Analysis")
-print("Total months:", row_count)
+print("Total Months:", row_count)
 print(f"Total: ${total_profit_loss:.0f}")
-print(f"Average change: ${average_change:.0f}")
-print(f"Greatest increase in profits: Date: {max_profit_date}, Amount: (${max_profit_increase:.0f})")
-print(f"Greatest decrease in profits: Date: {min_profit_date}, Amount: (${max_profit_decrease:.0f})")
+print(f"Average Change: ${average_change:.0f}")
+print(f"Greatest Increase in Profits: Date: {max_profit_date}, Amount: (${max_profit_increase:.0f})")
+print(f"Greatest Decrease in Profits: Date: {min_profit_date}, Amount: (${max_profit_decrease:.0f})")
 
 # export text file with results
 with open("Results.txt", "w") as file: 
-    file.write("``` text\n")
     file.write("Financial Analysis\n")
-    file.write("Total months: " + str(row_count) + "\n")
+    file.write("Total Months: " + str(row_count) + "\n")
     file.write("Total: $" + str(int(total_profit_loss)) + "\n")
-    file.write("Average change: $" + str(round(average_change, 2)) + "\n")
-    file.write("Greatest increase in profits: Date: " + max_profit_date + ", Amount: $(" + str(int(max_profit_increase)) + ")\n")
-    file.write("Greatest decrease in profits: Date: " + min_profit_date + ", Amount: $(" + str(int(max_profit_decrease)) + ")\n")
-    file.write("```")
-    print("Results in text file complete.txt")
+    file.write("Average Change: $" + str(round(average_change, 2)) + "\n")
+    file.write("Greatest Increase in Profits: Date: " + max_profit_date + ", Amount: $(" + str(int(max_profit_increase)) + ")\n")
+    file.write("Greatest Decrease in Profits: Date: " + min_profit_date + ", Amount: $(" + str(int(max_profit_decrease)) + ")\n")
+    
