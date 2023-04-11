@@ -1,7 +1,8 @@
 import csv
+import urllib.request
 
 #define the file path
-file_path = "/Users/nikolm/Desktop/budget_data.csv"
+url_path = "https://raw.githubusercontent.com/nikol-m/python-challenge/main/python-challenge/PyBank/Resources/budget_data.csv"
 
 # define profit/loss
 total_profit_loss = 0
@@ -13,8 +14,8 @@ max_profit_decrease = float("inf")
 min_profit_date = ""
 
 # read the CSV file into a list
-with open(file_path, 'r') as csvfile:
-    csvreader = csv.reader(csvfile)
+with urllib.request.urlopen(url_path) as url: 
+    csvreader = csv.reader(url.read().decode().splitlines())
     header = next(csvreader)
     data = list(csvreader)
 
