@@ -1,15 +1,17 @@
 import csv
+import urllib.request
 
 #define file 
-file_path = "/users/nikolm/Desktop/election_data.csv"
+url_path = "https://raw.githubusercontent.com/nikol-m/python-challenge/main/python-challenge/PyPoll/Resources/election_data.csv"
+
 
 # define variables
 total_votes = 0
 vote_counts = {}   
 
 # read the CSV file into a list
-with open(file_path, 'r') as csvfile:
-    csvreader = csv.reader(csvfile)
+with urllib.request.urlopen(url_path)as url: 
+    csvreader = csv.reader(url.read().decode().splitlines())
     header = next(csvreader)
     data = list(csvreader)
 
