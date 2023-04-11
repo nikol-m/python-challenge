@@ -24,7 +24,6 @@ for row in data:
     vote_counts[candidate] += 1
 
 # calculate and print percentage of votes for each candidate
-print("```text")
 print("Election Results")
 print("--------------------------")
 print("Total Votes:", total_votes)
@@ -50,7 +49,6 @@ print("---------------------------------")
 
 # export text file with results
 with open("Results.txt", "w") as file:
-    file.write("```text\n") 
     file.write("Election Results\n")
     file.write("--------------------------\n")
     file.write("Total Votes: " + str(total_votes) + "\n")
@@ -61,6 +59,4 @@ with open("Results.txt", "w") as file:
     file.write("---------------------------------\n")
     file.write(f"Winner: {winner}\n")
     file.write("---------------------------------\n")
-    file.write("```\n")
-
-print("Results exported to Results.txt")
+ 
