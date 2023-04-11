@@ -28,8 +28,13 @@ print("--------------------------")
 print("Total Votes:", total_votes)
 print("--------------------------")
 
+# initialize the winner variable to None and winning_votes to 0
 winner = None
 winning_votes = 0
+
+# iterate through the vote_counts dictionary to calculate the % of votes for each candidate; 
+# print the results 
+# update the winner variable if a candidate has received more votes than the current winner
 for candidate, votes in vote_counts.items():
     percentage = (votes / total_votes) *100
     print(f"{candidate}: {percentage:.3f}% ({votes})")
